@@ -148,6 +148,10 @@ header.container {
   color: #C8C9C1;
   padding: 5rem 0 5rem 0;
   margin-bottom: 5rem;
+  background-image: url('../img/black-eyed-susan-outline.svg');
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: contain;
 }
 
 .full-width {
