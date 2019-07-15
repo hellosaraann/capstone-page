@@ -109,6 +109,30 @@ body {
   background-color: #EFEEE2;
 }
 
+header {
+  background-color: #161E3A;
+  color: #C8C9C1;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  min-height: 100vh;
+  width: 3rem;
+}
+
+.align-bottom {
+  position: absolute;
+  bottom: 0;
+  left: -.9rem;
+}
+
+header.container {
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
 .center-wrap {
   margin: auto;
   width: 60%;
@@ -122,10 +146,8 @@ body {
   background-size: cover;
   background-color: #293a80;
   color: #C8C9C1;
+  padding: 5rem 0 5rem 0;
   margin-bottom: 5rem;
-  /* background-image: url('../img/hero-flowers.jpg');
-  background-position: center;
-  background-attachment: fixed; */
 }
 
 .full-width {
@@ -139,6 +161,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .container.column {
@@ -150,18 +173,27 @@ body {
   padding: 5rem;
   margin: 0;
   box-sizing: border-box;
+  min-width: 350px;
+  /* border: 1px solid #C8C9C1; */
+}
+
+.col-1 {
+  width: 100%;
 }
 
 .col-2 {
   width: 50%;
+  flex-grow: 1;
 }
 
 .col-4 {
   width: 25%;
+  flex-grow: 2;
 }
 
 .col-3-4 {
   width: 75%;
+  flex-shrink: 2;
 }
 
 .col.title {
@@ -170,6 +202,7 @@ body {
 
 .image.col {
   padding: 0;
+  min-width: 200px;
 }
 
 img {
@@ -191,14 +224,25 @@ img {
   color: #EFEEE3;
 }
 
+.blue-bg .highlight {
+  color: #C8C9C1;
+}
+
 .dark-bg a,
 .blue-bg a {
-  color: #B7BA68;
+  color: #B5BA5E;
+  border-bottom: 1px solid #EFEEE2;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid #B5BA5E;
+  color: #1A539A;
 }
 
 .main-footer {
   font-size: 1rem;
-  border: 1px solid yellow;
 }
 
 footer.main-footer.col {
@@ -216,28 +260,53 @@ h1 {
   padding: 5rem 0;
 }
 
-h2.subtitle {
-  padding-bottom: 5rem;
+header p {
+  font-size: .8rem;
+  padding: 1rem;
+  writing-mode: vertical-lr;
 }
 
 h2 {
+  font-family: 'Coustard', serif;
+  font-weight: lighter;
+  font-size: 2rem;
+  line-height: 1.25em;
+}
+
+header p,
+h3,
+.image-explainer-text {
   font-family: 'Raleway', sans-serif;
   font-weight: lighter;
-  font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: .1em;
-  line-height: 1.25em;
+  line-height: 1.5em;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+.tyfyc-title {
+  font-style: italic;
+  font-weight: bold;
 }
 
 .center {
   text-align: center;
 }
 
-blockquote p,
-.highlight p {
+blockquote p {
   font-size: 2em;
   line-height: 1.75em;
   padding: 2rem 0;
+}
+
+.highlight {
+  font-family: 'Coustard', serif;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: #2A3C7E;
 }
 
 blockquote p {
@@ -426,6 +495,20 @@ p.timeline-descriptors {
 /* large tablets */
 @media all and (max-width: 1024px) {
 
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .image.col-4 {
+    padding: 0;
+    min-width: 200px;
+    width: 50%;
+  }
+
   /* TYPOGRAPHY */
 
 h1 {
@@ -528,6 +611,17 @@ main p,
   .center-wrap {
     width: 85vw;
     margin: auto;
+  }
+
+  header {
+    background-color: #161E3A;
+    color: #C8C9C1;
+    position: fixed;
+    top: 0;
+    left: auto;
+    right: auto;
+    width: 100vw;
+    max-width: 100vw;
   }
 
 }
