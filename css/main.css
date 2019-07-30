@@ -178,6 +178,10 @@ header.container {
   min-width: 350px;
 }
 
+.col.nav {
+  padding: 1rem 5rem;
+}
+
 .col-1 {
   width: 100%;
 }
@@ -271,6 +275,7 @@ h1 {
 
 p {
   max-width: 60rem;
+  padding-bottom: 1rem;
 }
 
 header p,
@@ -293,7 +298,7 @@ h2 {
 header p,
 footer p,
 h3,
-.citation {
+.caption {
   font-family: 'Raleway', sans-serif;
   font-weight: lighter;
   text-transform: uppercase;
@@ -302,7 +307,14 @@ h3,
 }
 
 .citation {
-  font-size: .8rem;
+  font-family: 'Lora', serif;
+  font-weight: normal;
+  line-height: 1.5em;
+  font-size: .9rem;
+}
+
+.caption {
+  font-size: .7rem;
 }
 
 .image-explainer-text {
@@ -369,6 +381,10 @@ blockquote {
   background-repeat: no-repeat;
   background-position: 0 15%;
   background-size: 60px;
+}
+
+li {
+  padding-bottom: 1.75rem;
 }
 
 
