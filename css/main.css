@@ -193,7 +193,7 @@ header.container {
 
 .col-4 {
   width: 25%;
-  flex-grow: 2;
+  flex-grow: 1;
 }
 
 .col-3-4 {
@@ -227,7 +227,16 @@ img {
 }
 
 .dark-bg {
-  background-color: #161E3B;
+  background-color: #161E39;
+  color: #EFEEE3;
+}
+
+.light-bg {
+  background-color: #EFEEE3;
+  color: #161E39;
+}
+
+.dark-bg .highlight {
   color: #EFEEE3;
 }
 
@@ -383,7 +392,7 @@ blockquote {
   background-size: 60px;
 }
 
-li {
+.citation li {
   padding-bottom: 1.75rem;
 }
 
@@ -552,7 +561,6 @@ p.timeline-descriptors {
 
   .image.col-4 {
     padding: 0;
-    min-width: 200px;
     width: 50%;
   }
 
