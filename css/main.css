@@ -111,6 +111,7 @@ body {
 
 header {
   background-color: #2E5490;
+  border: 1px solid #161E39;
   color: #C8C9C1;
   position: fixed;
   top: 0;
@@ -119,6 +120,10 @@ header {
   height: 100vh;
   min-height: 100vh;
   width: 3rem;
+}
+
+main {
+  margin-left: 3rem;
 }
 
 .align-bottom {
@@ -153,9 +158,10 @@ header.container {
 }
 
 .full-width {
-  width: 100vw;
+  box-sizing: border-box;
+  width: 100%;
   max-width: 100%;
-  min-width: 100vw;
+  min-width: 100%-3rem;
   margin: auto;
 }
 
@@ -163,7 +169,7 @@ header.container {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .container.column {
@@ -172,10 +178,9 @@ header.container {
 }
 
 .col {
-  padding: 5rem;
+  padding: 3rem;
   margin: 0;
   box-sizing: border-box;
-  min-width: 350px;
 }
 
 .col.nav {
@@ -193,7 +198,6 @@ header.container {
 
 .col-4 {
   width: 25%;
-  flex-grow: 1;
 }
 
 .col-3-4 {
@@ -207,14 +211,14 @@ header.container {
 
 .image.col {
   padding: 0;
-  min-width: 200px;
+  border: 1px solid #161E39;
 }
 
 .main-footer .col {
   padding: .5rem 1rem .5rem 4rem;
   margin: 0;
   box-sizing: border-box;
-  min-width: 350px;
+  min-width: 300px;
 }
 
 img {
@@ -344,6 +348,7 @@ h3 {
 
 .center {
   text-align: center;
+  align-self: center;
 }
 
 .right {
@@ -396,51 +401,6 @@ blockquote {
   padding-bottom: 1.75rem;
 }
 
-
-
-
-
-/* TYPOGRAPHY — TIMELINE */
-
-/* h2.timeline-image-placeholder {
-  font-size: 10rem;
-  line-height: 1em;
-  padding: 0;
-  margin: 0;
-} */
-
-h4.timeline-year {
-  font-family: 'Coustard', serif;
-  letter-spacing: .1em;
-  font-size: 2rem;
-  line-height: 1em;
-  padding: .5rem 0;
-  margin: .5rem 0;
-}
-
-p.timeline-descriptors {
-  font-size: 1.2em;
-  line-height: 1.25em;
-  padding: 1em 0;
-  margin: .5em 0;
-}
-
-
-/* WIDGETS & Widget behaviors */
-
-.y.mandatory-scroll-snapping {
-  scroll-snap-type: y mandatory;
-}
-
-
-/* STORY SECTION */
-
-.expanding-widget {
-  background-color: #603B5D;
-  color: #EFEEE2;
-  padding: 4em;
-  height: 40vh;;
-}
 
 
 /* ==========================================================================
@@ -559,8 +519,7 @@ p.timeline-descriptors {
     width: 100%;
   }
 
-  .image.col-4 {
-    padding: 0;
+  .col-4 {
     width: 50%;
   }
 
@@ -583,72 +542,6 @@ main p,
   width: 75vw;
 }
 
-   /* side nav media size changes to header-nav
-
-   .hamburger,
-   .closebtn {
-     cursor: pointer;
-   }
-
-   .header-nav ul ul:before {
-      border-color: transparent;
-      content: none;
-    }
-
-   .header-nav {
-      height: 100vh;
-      width: 0;
-      position: fixed;
-      z-index: 150;
-      top: 0;
-      right: 0;
-      margin: 0;
-      background-color: white;
-      border-left: 1px solid #FAD642;
-      border-top: 1px solid #FAD642;
-      border-bottom: 1px solid #FAD642;
-      overflow-x: hidden;
-      padding-top: 2em;
-      transition: 0.5s;
-   }
-
-   .header-nav nav {
-     right: 0;
-     position: absolute;
-     top: 20rem;
-   }
-
-   .header-nav ul {
-     list-style: none;
-   }
-
-   .header-nav li {
-     display: block;
-     width: 100%;
-     padding: .75em;
-   }
-
-   li.parent-drop-down ul {
-     visibility: visible;
-     position: static;
-     border: 0;
-   }
-
-   .closebtn {
-      position: absolute;
-      top: 1.5rem;
-      right: 1.5rem;
-      font-size: 3rem;
-      z-index: 200;
-   }
-
-   .closebtn a:hover,
-   .closebtn a:focus {
-     color: #431E1D;
-     border: 0;
-   }
-
- */
 }
 
 /* large smartphones & tablets */
@@ -685,14 +578,6 @@ main p,
 /* smartphones */
 @media all and (max-width: 575px) {
 
-  .down-arrow {
-    border: 0;
-    border-width: 0;
-    display: none;
-    padding: 0;
-    margin: 0;
-  }
-
   h1 {
     font-size: 3em;
     padding: 1em 0;
@@ -700,7 +585,6 @@ main p,
 
   .hero {
     height: auto;
-
   }
 
   h2 {
@@ -709,8 +593,7 @@ main p,
     margin: 0;
   }
 
-  main p,
-  .widget-trigger {
+  main p {
     font-size: 1rem;
     line-height: 1.75em;
     padding-top: 1rem;
@@ -722,10 +605,6 @@ main p,
     margin: auto;
   }
 
-  .container.card-game {
-    width: 300px;
-    height: auto;
-  }
 
 }
 
@@ -736,11 +615,6 @@ main p,
     padding: 0;
     margin-left: 0;
     margin-right: 0;
-  }
-
-  .container.card-game {
-    width: 300px;
-    height: auto;
   }
 
 }
