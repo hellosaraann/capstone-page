@@ -111,7 +111,6 @@ body {
 
 header {
   background-color: #2E5490;
-  border: 1px solid #161E39;
   color: #C8C9C1;
   position: fixed;
   top: 0;
@@ -210,7 +209,6 @@ header.container {
 
 .image.col {
   padding: 0;
-  border: 1px solid #161E39;
 }
 
 .main-footer .col {
